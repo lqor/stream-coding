@@ -1,0 +1,10 @@
+<apex:page standardController="Opportunity" extensions="OpportunityCpq" lightningStylesheets="true" showHeader="false">
+  <apex:form >
+      <apex:pageBlock>
+          <apex:pageBlockSection showHeader="false">
+              <apex:inputField value="{!Opportunity.Description}"/>
+              <apex:commandButton value="click" rerender="one" action="{!show}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

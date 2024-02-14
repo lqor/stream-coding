@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Valentine" icon-name="standard:opportunity">
+        <canvas class="confettiCanvas" id="canvas" lwc:dom="manual"></canvas>
+
+        <div class="slds-m-horizontal_small">
+            <template if:true={yesClicked}>
+                <img src={gifFull_2} />
+
+                <div>WOOOOOO!!! I love you my duuuuck!! ;))</div>
+            </template>
+            <template if:false={yesClicked}>
+                <img src={gifFull} />
+                <div>Will you be my Valentine?</div>
+            </template>
+            <div class="slds-m-top_small">
+                <lightning-button label="Yes" title="Yes" onclick={handleYes} variant="success"></lightning-button>
+            </div>
+            <div class="slds-m-top_small">
+                <lightning-button label="Yes" title="Yes" onclick={handleYes}  variant="destructive"></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+
+</template>
