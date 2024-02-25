@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Department People" icon-name="standard:people">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                name="department"
+                label="Department"
+                value={departmentSelected.value}
+                options={options}
+                onchange={handleChange} >
+            </lightning-combobox>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-datatable
+                key-field="Id"
+                data={filteredData}
+                columns={columns}
+                hide-checkbox-column
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

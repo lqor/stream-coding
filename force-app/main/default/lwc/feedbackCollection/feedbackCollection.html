@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Feedback Collection" icon-name="standard:feedback">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name="Rating__c" label="Rating (1-10)"></lightning-input-field>
+                <lightning-input-field field-name="Most_helpful_part__c"></lightning-input-field>
+                <lightning-input-field field-name="What_could_be_improved__c"></lightning-input-field>
+                <lightning-input-field field-name="Participant__c"></lightning-input-field>
+                <lightning-input-field field-name="Training__c" value={recordId}></lightning-input-field>
+                <lightning-input-field field-name="Message__c"></lightning-input-field>
+                <lightning-input-field field-name="Know_More__c"></lightning-input-field>
+
+                <lightning-button class="slds-m-top_small" type="submit" label="Save"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
